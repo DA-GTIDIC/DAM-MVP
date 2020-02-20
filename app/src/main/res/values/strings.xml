@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MVP</string>
+
+    <string name="label_name">Introdueix el teu nom:</string>
+    <string name="label_year">Introdueix any:</string>
+    <string name="label_month">Introdueix mes:</string>
+    <string name="label_day">Introdueix dia:</string>
+    <string name="update">Update</string>
+    <string name="clear">Clear</string>
+</resources>

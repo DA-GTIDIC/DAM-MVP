@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="MainActivity">
+
+    <TextView
+        android:id="@+id/textView_labelName"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/label_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_fullName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:hint="@string/label_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/textView_labelName"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editText_year"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        android:hint="@string/label_year"
+        app:layout_constraintEnd_toStartOf="@+id/editText_month"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/textView_labelYear"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editText_month"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        android:hint="@string/label_month"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toStartOf="@+id/editText_day"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText_year"
+        app:layout_constraintTop_toBottomOf="@+id/textView_labelMonth" />
+
+    <EditText
+        android:id="@+id/editText_day"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        android:hint="@string/label_day"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintStart_toEndOf="@+id/editText_year"
+        app:layout_constraintTop_toBottomOf="@+id/textView_labelDay" />
+
+    <TextView
+        android:id="@+id/textView_labelYear"
+        android:layout_width="97dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/label_year"
+        app:layout_constraintEnd_toStartOf="@+id/textView_labelMonth"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_fullName" />
+
+    <TextView
+        android:id="@+id/textView_labelMonth"
+        android:layout_width="97dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/label_month"
+        app:layout_constraintEnd_toStartOf="@+id/textView_labelDay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView_labelYear"
+        app:layout_constraintTop_toBottomOf="@+id/editText_fullName" />
+
+    <TextView
+        android:id="@+id/textView_labelDay"
+        android:layout_width="97dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/label_day"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView_labelMonth"
+        app:layout_constraintTop_toBottomOf="@+id/editText_fullName" />
+
+    <Button
+        android:id="@+id/button_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:onClick="update"
+        android:text="@string/update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_clear"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:onClick="clear"
+        android:text="@string/clear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_bio" />
+
+    <TextView
+        android:id="@+id/textView_bio"
+        android:layout_width="343dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="52dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_year" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView_labelYear"
+        app:layout_constraintGuide_end="688dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
